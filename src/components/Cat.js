@@ -44,6 +44,9 @@ class Cats extends React.Component {
         .catch((err) => console.error(err))
     }
 
+    // componentWillUnmount() {
+    // }
+
     render() {
         // console.log(this.state.images)
         return ( 
@@ -52,7 +55,7 @@ class Cats extends React.Component {
                 <Search onSearch={this.search}/>
                 <Nav />
                 <div className = "photo-container">
-                <h2>{this.state.query}</h2>
+                <h2>{this.state.title}</h2>
 
                 { this.state.isSearching ? <h2> Loading... </h2> : <PhotoContainer p={this.state.images} alt='Cats' /> }
 

@@ -44,6 +44,9 @@ class Home extends React.Component {
         .catch((err) => console.error(err))
     }
 
+    // componentWillUnmount() {
+    // }
+
     render() {
         // console.log(this.state.photos)
         return (

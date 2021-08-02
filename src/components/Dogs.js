@@ -8,6 +8,7 @@ import Nav from '../components/Nav';
 import Search from '../components/SearchForm';
 import PhotoContainer from '../components/PhotoContainer';
 
+
 class Dogs extends React.Component {
 
     constructor() {
@@ -43,6 +44,9 @@ class Dogs extends React.Component {
         })
         .catch((err) => console.error(err))
     }
+
+    // componentWillUnmount() {
+    // }
 
     render() {
         // console.log(this.state.images)
