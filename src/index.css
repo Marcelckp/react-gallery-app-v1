@@ -1,13 +1,139 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #3f4850;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+    font-size: 2em;
+    margin: 52px 0 40px;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search-form {
+    max-width: 460px;
+    display: flex;
+    margin: 0 auto 32px;
+}
+
+.search-form button {
+    outline: none;
+    background-color: #438bbd;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 0 0.35em 0.35em 0;
+    cursor: pointer;
+}
+
+input {
+    font-size: 1em;
+    width: 100%;
+    background-color: #edeff0;
+    padding: 10px 15px;
+    border: 3px solid #d7dbdf;
+    border-right: none;
+    border-radius: 0.35em 0 0 0.35em;
+    outline: none;
+}
+
+.main-nav li {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.main-nav a {
+    display: block;
+    background: #438bbd;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+}
+
+.main-nav .active,
+.main-nav a:hover,
+.search-form button:hover {
+    background-color: #275270;
+}
+
+.photo-container ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.photo-container ul li {
+    width: 220px;
+    height: 165px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.photo-container ul img {
+    width: 100%;
+    transform: scale(1.25);
+    transition: transform 1.25s;
+}
+
+.photo-container li:hover img {
+    transform: scale(1.65);
+}
+
+.photo-container .not-found {
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        padding-top: 2em;
+    }
+    .photo-container li {
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        padding-top: 4em;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+    .main-nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    .main-nav li {
+        margin: 10px;
+        width: 100px;
+    }
+}
+
+body {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
+}
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
 }
