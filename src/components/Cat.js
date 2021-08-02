@@ -23,10 +23,11 @@ class Cats extends React.Component {
         this.search()
     }
 
-    search(query = 'Cats') {
-        axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${Key}&tags=cats&per_page=24&format=json&nojsoncallback=1`)
+    search = (query = 'Cats') => {
+        axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${Key}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
         .then(res => {
             const data = res.data.photos.photo;
+
             const p = data.map((foto) => {
             const id = foto.id;
             const server = foto.server;
@@ -51,7 +52,7 @@ class Cats extends React.Component {
                 <Search onSearch={this.search}/>
                 <Nav />
                 <div className = "photo-container">
-                <h2> Cats </h2>
+                <h2>{this.state.query}</h2>
 
                 { this.state.isSearching ? <h2> Loading... </h2> : <PhotoContainer p={this.state.images} alt='Cats' /> }
 

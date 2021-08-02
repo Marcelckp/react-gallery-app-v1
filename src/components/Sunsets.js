@@ -23,15 +23,16 @@ class Sunset extends React.Component {
         this.search()
     }
 
-    search(query = 'sunsets') {
+    search = (query = 'sunsets') => {
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${Key}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
         .then(res => {
             const data = res.data.photos.photo;
+
             const p = data.map((foto) => {
             const id = foto.id;
             const server = foto.server;
             const secret = foto.secret;
-            return `https://live.staticflickr.com/${server}/${id}_${secret}.jpg`
+            return `https://live.staticflickr.com/${server}/${id}_${secret}.jpg`;
             })
 
             this.setState({
@@ -48,7 +49,7 @@ class Sunset extends React.Component {
         return ( 
             <div className = "container" >
                 <h1 > My Cool React App </h1> 
-                <Search />
+                <Search onSearch={this.search}/>
                 <Nav />
                 <div className = "photo-container" >
                 <h2>{this.state.title}</h2>

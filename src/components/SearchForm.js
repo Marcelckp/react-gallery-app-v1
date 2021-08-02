@@ -9,6 +9,7 @@ class Search extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        
         this.props.onSearch(this.query.value);
 
         console.log(this.query.value);

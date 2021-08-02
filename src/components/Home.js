@@ -23,7 +23,7 @@ class Home extends React.Component {
         this.search()
     }
 
-    search(query = 'super cars') {
+    search = (query = 'super cars') => {
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${Key}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
         .then(res => {
             const data = res.data.photos.photo;
