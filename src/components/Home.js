@@ -50,17 +50,17 @@ class Home extends React.Component {
     render() {
         // console.log(this.state.photos)
         return (
-            <div className="container">
-                <h1> My Cool React App </h1>
-                <Search onSearch={this.search}/>
-                <Nav />
-                <div className="photo-container">
-                <h2>{this.state.title}</h2>
+                <div className="container">
+                    <h1> My Cool React App </h1>
+                    <Search onSearch={this.search}/>
+                    <Nav />
+                    <div className="photo-container">
+                    <h2>{this.state.title}</h2>
 
-                {this.state.isSearching ? <h2>Loading...</h2> : <PhotoContainer p={this.state.photos} alt='SuperCars' />}
+                    {this.state.isSearching ? <h2>Loading...</h2> : <PhotoContainer p={this.state.photos} alt='SuperCars' />}
 
+                    </div>
                 </div>
-            </div>
         )
     }
 }
