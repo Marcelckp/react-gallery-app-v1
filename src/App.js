@@ -16,10 +16,10 @@ class App extends React.Component {
     return ( 
       <BrowserRouter>
           <Switch>
-            <Route exact path = '/:query?' render={() => <Home />} />
-            <Route path = '/cats/:query?' render={() => <Cats />} />
-            <Route path = '/dogs/:query?' render={() => <Dogs />} />
-            <Route path = '/sunsets/:query?' render={() => <Sunset />} />  
+            <Route exact path = '/' render={() => <Home />} />
+            <Route path = '/cats' render={() => <Cats />} />
+            <Route path = '/dogs' render={() => <Dogs />} />
+            <Route path = '/sunsets' render={() => <Sunset />} />  
             <Route component={PageError} />
           </Switch>
       </BrowserRouter>
